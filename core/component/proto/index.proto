@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "matrix.proto";
+
+message protoIndexEntry {
+    string key = 1;
+    protoMatrix value = 2;
+}
+
+message protoIndex {
+    repeated protoIndexEntry entries = 1;
+}
+
+// protoc --cpp_out=. index.proto
